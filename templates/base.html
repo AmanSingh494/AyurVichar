@@ -1,4 +1,3 @@
-
 {% load static %}
 
 <!DOCTYPE html>
@@ -9,8 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
     <title>AyurVichar | {% block title %}{% endblock title %}</title>
-    
+
     {% block head %}
     {% endblock head %}
 
@@ -20,30 +20,18 @@
 
     <header>
         <section id="navbar">
-
             <nav>
-                <input type="checkbox" id="check">
-            <label id="check-label" for="check" class="checkbtn">
-                <i class='bx bx-menu'></i>
-               
-            </label>
-                <div class="logo">
-                    <h1><a href="/"><img class="logo-img" src="{% static 'img/law-hammer.svg' %}" 
-                        alt="AyurVichar - (tag line)"><span> AyurVichar </span></a>
-                <h1>
+                <div class="logo font-large">
+                    <img src="{% static 'img/yoga 2 1.png' %}" alt="">
                 </div>
-                <ul class=" menu-list">
-                    
-                    <li> <a class="menu-items" href="/">Home</a> </li>
-
-                    <li> <a class="menu-items" href="/about">About</a> </li>
-                    <li> <a class="menu-items" href="/services">Services</a> </li>
-                    <li> <a class="menu-items" href="/contact">Contact</a> </li>
-                    <li> <a class="menu-items" href="/login">Login</a> </li>
-                    <li> <a class="menu-items" href="/register">Register</a> </li>
-
-
-                </ul>
+                <div class="nav-links">
+                    <a href="#"><span class="font-mid-medium">Home</span></a>
+                    <a href="#"><span class="font-mid-medium">About</span></a>
+                    <a href="#"><span class="font-mid-medium">Services</span></a>
+                    <a href="#"><span class="font-mid-medium">Contact</span></a>
+                    <a href="#"><span class="font-mid-medium btn">Log in</span></a>
+                    <a href="#"><span class="font-mid-medium btn-border">Sign up</span></a>
+                </div>
             </nav>
         </section>
     </header>
@@ -53,33 +41,46 @@
         {% block main %}
         {% endblock main %}
     </main>
-
     <footer>
-        <div class="last-new">
-
-            <p>Get access to exclusive update...</p>
-
-            <div class="subscription-box">
-                <input id="subscription" placeholder="youremail.com" required type="email">
-                <a target="_blank" href="mailto:adarsh@onionreads.com">Subscribe</a>
+        <span class="footer-heading font-large">AYURVICHAR</span>
+        <div class="footer-items">
+            <div>
+                <p>Contact us</p>
+                <span>+91 xxxxxxxxxx</span>
+                <span>+91 xxxxxxxxxx</span>
             </div>
-
-
-
-
-
+            <div>
+                <p>Information</p>
+                <span>About us</span>
+                <span>More Search</span>
+                <span>Services</span>
+                <span>Blogs</span>
+                <span>Testimonials</span>
+                <span>Events</span>
+            </div>
+            <div>
+                <p>Helpful Links</p>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="email-box">
+                <p>Stay tuned with us:</p>
+                <input type="text">
+                <span class="btn"> Subscribe</span>
+            </div>
         </div>
-
-        <div class="last-text ">
-
+        <div class="white-line"></div>
+        <div class="solve-ease-tag">
             <p class="font-ss">Designed & Developed with <i id="heart" class=' bx bxs-heart'></i> Love by <span><a
-                        class="ad-link" href="https://hackcbs.tech/" >Solve-Ease</a></span> &copy; 2023
+                        class="ad-link" href="">Solve-Ease</a></span> &copy;
+                2023
             </p>
         </div>
     </footer>
 
+
     {% block script %}
-    
+
     {% endblock script %}
 
 
